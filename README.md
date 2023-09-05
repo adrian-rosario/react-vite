@@ -19,7 +19,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - Vitest for unit tests, `"test": "vitest"` included in `package.json` scripts
 - `react-router-dom` and added `RouterProvider` for page routes
 - CSS for displaying buttons in a four grid template columns and added `y` scrolling, added box shadowing, and used `min-width` to account for various image sizes
-- Eric Meyer [reset CSS](https://meyerweb.com/eric/tools/css/reset/) so we style declarations begin from a neutral point
+- Eric Meyer [reset CSS](https://meyerweb.com/eric/tools/css/reset/) so styles display from a neutral point
 - svg for the browser icon
 - Fetch requests to [Dog API](https://dog.ceo/dog-api/) for dogs list and random image
 - generating React project using [Vite](https://vitejs.dev/guide/), kept some of the scaffolding styles
