@@ -88,9 +88,13 @@ li {margin-bottom: 1rem;}
   flex: 1;
 }
 
+.imageDisplay {
+  width: 450px;
+}
+
 .imageDisplay img {
   margin: 0 auto;
-  width: 450px;
+  max-width: 450px;
 }
 
 .breedsList {
