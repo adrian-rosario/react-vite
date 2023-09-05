@@ -87,5 +87,38 @@ describe('DogsPage()', () => {
     const poochImage = await waitFor( () => screen.getByAltText('pooch image') as HTMLImageElement);
     expect(poochImage.src).toBe('https://images.dog.ceo/breeds/african/n02116738_3365.jpg');
   })
+
+  it('displays technical difficulties image if there is an api error', async () => {
+    window.fetch = vi.fn();
+    window.fetch.mockResolvedValueOnce({
+      json: async () => (
+        {
+          message: {
+            affenpinscher: [],
+            african: [],
+            airedale: [],
+            akita: [],
+            appenzeller: [],
+            australian: [ 'shepherd' ],
+          }
+        }
+      )
+    })
+
+    render(<DogsPage />)
+
+    const buttonElement = await screen.findByText('airedale', {exact: false});
+
+    window.fetch = vi.fn();
+    window.fetch.mockResolvedValueOnce({
+      json: async () => (
+        Promise.reject
+      )
+    });
+    fireEvent.error(screen.getByAltText("pooch image"))
+    fireEvent.click(buttonElement);
+    const imageDisplayed = (await waitFor( () => screen.getByAltText('pooch image') as HTMLImageElement));
+    expect(imageDisplayed.src).toContain('technical-difficulties.jpg')
+  })
 });
 
