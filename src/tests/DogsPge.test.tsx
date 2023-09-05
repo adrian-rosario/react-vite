@@ -55,8 +55,9 @@ describe('DogsPage()', () => {
   })
 
   it('renderes a new image when button is clicked', () => {
+    // TODO:
     // add in fetch mock for the random breed image
-    // button click setup, test new image path
+    // userEvent button click setup, test new image path 
   })
 });
 
