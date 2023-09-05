@@ -24,6 +24,7 @@ export default function DogsPage(){
     const imageQuery = async() => {
       const response = await fetch(imagesUrl + breed + '/images/random');
       const newData = await response.json();
+      console.log('newData:\n', newData);
       setImageSource(newData.message);
     }
     imageQuery();
@@ -62,7 +63,9 @@ export default function DogsPage(){
                     image.target.src = sorry;
                   }}                  
                 style={{ display: imageSource ? 'block' : 'none' }} 
-              className='pooch' />
+              className='pooch'
+              id="pooch" 
+              alt="pooch image" />
             </div>
           </div>
         </div>

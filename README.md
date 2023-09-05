@@ -10,6 +10,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Utilized:
 
+- test case for image change after button is clicked
 - default image displays until a dog button is clicked
 - "Sorry" image displays if the dog list API request fails
 - using `onError` to display a "Sorry" image if the dog image results in a 404, as in the case of Cavapoo
