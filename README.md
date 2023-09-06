@@ -10,6 +10,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Utilized:
 
+- added modal with overlay, styes scoped to module
 - test case for image display of `technical-difficulties.jpg` when there is an API error
 - test case for image change after button is clicked
 - default image displays until a dog button is clicked
