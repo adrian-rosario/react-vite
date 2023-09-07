@@ -6,7 +6,7 @@ export default function Header(){
     <header>
     <h1 className={styles.greeting}>
         Dog and Puppy Show
-      </h1>
+    </h1>
     </header>
     </>
   )
