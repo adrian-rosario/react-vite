@@ -3,6 +3,7 @@ import sorry from '../../images/technical-difficulties.jpg';
 import defaultImage from '../../images/js-logo-xs.png';
 import './dogsPage.component.css';
 const homePage = '/';
+import Layout from '../../layout/layout';
 
 export default function DogsPage(){
 
@@ -35,7 +36,7 @@ export default function DogsPage(){
     console.log('data', data);
     console.log(results.length);
     return (
-
+      <Layout>
       <div>                
         <div className='main'>
           <div className='listDisplay'>
@@ -64,7 +65,6 @@ export default function DogsPage(){
                   }}                  
                 style={{ display: imageSource ? 'block' : 'none' }} 
               className='pooch'
-              id="pooch" 
               alt="pooch image" />
             </div>
           </div>
@@ -75,12 +75,15 @@ export default function DogsPage(){
         </div>
 
       </div>
+      </Layout>
     )
   } else {
     return (
-        <div className='sorry'>
-          <img src={sorry} alt="Sorry! We are experiencing techincal difficilties. Please stand by..." />
-        </div>
+      <Layout>
+      <div className='sorry'>
+        <img src={sorry} alt="Sorry! We are experiencing techincal difficilties. Please stand by..." />
+      </div>
+      </Layout>  
     );
   }  
 }
