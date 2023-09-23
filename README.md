@@ -10,6 +10,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Utilized:
 
+- `framer-motion` for `exit` and enter transitions of modal dialog and backdrop, todo: review flicker bug
 - media query in the CSS for the small breakpoint
 - layout template for header and footer in dogs page, added copyright year in footer, added fixed width for resizing
 - adding a modal with overlay, styes scoped to module, added some styles from Udemy example
