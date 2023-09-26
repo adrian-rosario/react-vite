@@ -4,7 +4,7 @@ import styles from './defaultDialog.module.css'
 export default function DefaultDialog(props){
   return(
     <>
-    <div>
+    <div role="alert" aria-live="assertive">
       <Modal onClose={props.onClose}>
         <div>
           <h3 className={styles.heading}>
