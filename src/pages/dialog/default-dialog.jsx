@@ -19,7 +19,7 @@ export default function DefaultDialog(props){
             
           }}
       >
-        <div>
+        <div role="alert" aria-live="assertive">
           <h3 className={styles.heading}>
             Hello, thanks for visiting today.
           </h3>
