@@ -10,9 +10,13 @@ function Backdrop(props) {
 function ModalContent(props) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -30 }}
+      variants={{
+        hidden: { opacity: 0, y: -30 }, // when we can't see the element
+        visible: { opacity: 1, y: 0 }, // state we want framer-motion to transition to
+      }}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
       className={styles.modal}
     >
       {props.children}

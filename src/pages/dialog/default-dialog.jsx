@@ -13,15 +13,27 @@ export default function DefaultDialog(props) {
               Hello, thanks for visiting today.
             </h3>
             <div className={styles.badges}>
-              <ul>
+              <motion.ul
+                variants={{
+                  visible: { transition: { staggerChildren: 0.05 } },
+                }}
+              >
                 {images.map((image) => {
                   return (
-                    <li key={image.alt}>
+                    <motion.li
+                      variants={{
+                        hidden: { scale: 0.1 },
+                        visible: { scale: 1 },
+                      }}
+                      exit={{ scale: 0 }}
+                      // transition={{ type: "tween" }}
+                      key={image.alt}
+                    >
                       <img key={image.alt} {...image} />
-                    </li>
+                    </motion.li>
                   );
                 })}
-              </ul>
+              </motion.ul>
             </div>
             <button onClick={props.onClose}>Close</button>
           </div>

@@ -2,9 +2,11 @@ import { useState } from "react";
 import "../../app.css";
 import DefaultDialog from "../dialog/default-dialog";
 import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   const [modalIsShown, setModalIsShown] = useState(false);
+  const buttonTransition = { type: "spring", stiffness: 500, mass: 1 };
 
   function showModalHandler() {
     return setModalIsShown(true);
@@ -30,11 +32,24 @@ export default function HomePage() {
         <ul>
           <li>
             <form action={dogsPage}>
-              <button action='submit'>Dogs Page</button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                transition={buttonTransition}
+                action='submit'
+              >
+                Dogs Page
+              </motion.button>
             </form>
           </li>
           <li>
-            <button onClick={showModalHandler}>show overlay</button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={buttonTransition}
+              action='submit'
+              onClick={showModalHandler}
+            >
+              Show Overlay
+            </motion.button>
           </li>
         </ul>
       </div>
