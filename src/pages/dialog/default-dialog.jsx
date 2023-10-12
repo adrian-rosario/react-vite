@@ -18,21 +18,19 @@ export default function DefaultDialog(props) {
                   visible: { transition: { staggerChildren: 0.05 } },
                 }}
               >
-                {images.map((image) => {
-                  return (
-                    <motion.li
-                      variants={{
-                        hidden: { scale: 0.1 },
-                        visible: { scale: 1 },
-                      }}
-                      exit={{ scale: 1 }}
-                      transition={{ type: "spring" }}
-                      key={image.alt}
-                    >
-                      <img key={image.alt} {...image} />
-                    </motion.li>
-                  );
-                })}
+                {images.map((image) => (
+                  <motion.li
+                    variants={{
+                      hidden: { scale: 0.1 },
+                      visible: { scale: [0.1, 1.3, 1] }, // setting keyframes
+                    }}
+                    exit={{ scale: 1 }}
+                    transition={{ type: "spring" }}
+                    key={image.alt}
+                  >
+                    <img key={image.alt} {...image} />
+                  </motion.li>
+                ))}
               </motion.ul>
             </div>
             <button onClick={props.onClose}>Close</button>

@@ -18,6 +18,12 @@ export default function HomePage() {
 
   const dogsPage = "./dogs";
 
+  const hoverAnimation = {
+    scale: 1.1,
+    backgroundColor: "#260339",
+    borderColor: "#fff",
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -33,7 +39,8 @@ export default function HomePage() {
           <li>
             <form action={dogsPage}>
               <motion.button
-                whileHover={{ scale: 1.1 }}
+                whileHover={hoverAnimation}
+                whileFocus={hoverAnimation}
                 transition={buttonTransition}
                 action='submit'
               >
@@ -43,7 +50,8 @@ export default function HomePage() {
           </li>
           <li>
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={hoverAnimation}
+              whileFocus={hoverAnimation}
               transition={buttonTransition}
               action='submit'
               onClick={showModalHandler}
