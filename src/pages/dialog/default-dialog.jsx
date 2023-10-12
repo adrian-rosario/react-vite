@@ -25,8 +25,8 @@ export default function DefaultDialog(props) {
                         hidden: { scale: 0.1 },
                         visible: { scale: 1 },
                       }}
-                      exit={{ scale: 0 }}
-                      // transition={{ type: "tween" }}
+                      exit={{ scale: 1 }}
+                      transition={{ type: "spring" }}
                       key={image.alt}
                     >
                       <img key={image.alt} {...image} />
