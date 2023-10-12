@@ -1,38 +1,40 @@
-import {useState } from 'react';
-import '../../app.css'
-import DefaultDialog from '../dialog/default-dialog';
+import { useState } from "react";
+import "../../app.css";
+import DefaultDialog from "../dialog/default-dialog";
 
-export default function HomePage(){
-  const [modalIsShown, setModalIsShown] = useState(false);  
+export default function HomePage() {
+  const [modalIsShown, setModalIsShown] = useState(false);
 
-  function showModalHandler(){
+  function showModalHandler() {
     return setModalIsShown(true);
   }
 
-  function hideModalHandler(){
-    return setModalIsShown(false);    
+  function hideModalHandler() {
+    return setModalIsShown(false);
   }
 
-  const dogsPage = './dogs';
+  const dogsPage = "./dogs";
 
-  return(
+  return (
     <>
-    {modalIsShown && <DefaultDialog onClose={hideModalHandler} />}
+      {modalIsShown && <DefaultDialog onClose={hideModalHandler} />}
 
-    <h1>Vite + React</h1>
+      <div className='mainGreeting'>
+        <h1>Vite + React</h1>
 
-    <br />
+        <br />
 
-    <ul>
-      <li>
-        <a href={dogsPage}>[Dogs Page]</a>
-      </li>
-      <li>
-        <button onClick={showModalHandler}>
-          show overlay
-        </button>
-      </li>
-    </ul>
+        <ul>
+          <li>
+            <form action={dogsPage}>
+              <button action='submit'>Dogs Page</button>
+            </form>
+          </li>
+          <li>
+            <button onClick={showModalHandler}>show overlay</button>
+          </li>
+        </ul>
+      </div>
     </>
-  )
+  );
 }

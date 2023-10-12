@@ -67,3 +67,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.mainGreeting h1 {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border: 1px dotted rgba(255, 255, 255, 0.25);
+}
+
+.mainGreeting button {
+  width: 200px;
+}
