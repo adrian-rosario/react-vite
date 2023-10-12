@@ -1,6 +1,7 @@
 import Modal from "../../modal/modal";
 import styles from "./defaultDialog.module.css";
 import images from "./intro-images";
+import { motion } from "framer-motion";
 
 export default function DefaultDialog(props) {
   return (

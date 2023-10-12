@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../app.css";
 import DefaultDialog from "../dialog/default-dialog";
+import { AnimatePresence } from "framer-motion";
 
 export default function HomePage() {
   const [modalIsShown, setModalIsShown] = useState(false);
@@ -17,7 +18,9 @@ export default function HomePage() {
 
   return (
     <>
-      {modalIsShown && <DefaultDialog onClose={hideModalHandler} />}
+      <AnimatePresence>
+        {modalIsShown && <DefaultDialog onClose={hideModalHandler} />}
+      </AnimatePresence>
 
       <div className='mainGreeting'>
         <h1>Vite + React</h1>
