@@ -1,0 +1,49 @@
+
+#land-view {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+#challengeWelcome-header {
+  height: 95vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.challengeWelcome-wrapper {
+  z-index: 1;
+  position: absolute;
+  width: 40rem;
+  top: 15%;
+  text-align:center;
+}
+
+main {
+  width: 80%;
+  max-width: 70rem;
+  margin: 1rem auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0 .8rem 0;
+  color: #f2f25d;
+  line-height: 90%;
+}
+
+section {
+  text-align: left;
+}
+
+#hero-view {
+  width: 20rem;
+  max-width: 40%;
+  bottom: 10%;
+  left: 25%;
+  position: absolute;
+  object-fit: cover;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+}

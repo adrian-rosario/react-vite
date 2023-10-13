@@ -10,6 +10,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Utilized:
 
+- research from React examples for Challenge section
 - enter and exit animations with `framer-motion`, added variants to test
 - media query in the CSS for the small breakpoint
 - layout template for header and footer in dogs page, added copyright year in footer, added fixed width for resizing
