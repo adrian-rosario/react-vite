@@ -4,6 +4,13 @@ import images from "./intro-images";
 import { motion } from "framer-motion";
 
 export default function DefaultDialog(props) {
+  const hoverAnimation = {
+    scale: 1.1,
+    backgroundColor: "#260339",
+    borderColor: "rgb(255, 140, 0)",
+  };
+  const buttonTransition = { type: "spring", stiffness: 500, mass: 1 };
+
   return (
     <>
       <div role='alert' aria-live='assertive'>
@@ -19,21 +26,20 @@ export default function DefaultDialog(props) {
                 }}
               >
                 {images.map((image) => (
-                  <motion.li
-                    variants={{
-                      hidden: { scale: 0.1 },
-                      visible: { scale: [0.1, 1.3, 1] }, // setting keyframes
-                    }}
-                    exit={{ scale: 1 }}
-                    transition={{ type: "spring" }}
-                    key={image.alt}
-                  >
+                  <motion.li key={image.alt}>
                     <img key={image.alt} {...image} />
                   </motion.li>
                 ))}
               </motion.ul>
             </div>
-            <button onClick={props.onClose}>Close</button>
+            <motion.button
+              whileHover={hoverAnimation}
+              whileFocus={hoverAnimation}
+              transition={buttonTransition}
+              onClick={props.onClose}
+            >
+              Close
+            </motion.button>
           </div>
         </Modal>
       </div>
