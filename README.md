@@ -10,6 +10,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Utilized:
 
+- parallax scroll animation and FPO images added to the `greeting.component`
 - research from React examples for Challenge section
 - enter and exit animations with `framer-motion`, added variants to test
 - media query in the CSS for the small breakpoint

@@ -1,0 +1,16 @@
+#tracker-header {
+  justify-content: space-between;
+  display: flex;
+  /* width: 80%; */
+  /* max-width: 40rem; */
+  /* align-items: center; */
+}
+
+#tracker-header h1 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  
+  
+}
+
+/* body {display: initial;} */

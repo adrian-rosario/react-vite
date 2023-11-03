@@ -6,6 +6,7 @@
   height: 100%;
   object-fit: cover;
   position: absolute;
+  /* */
 }
 
 #challengeWelcome-header {
@@ -17,8 +18,24 @@
   z-index: 1;
   position: absolute;
   width: 40rem;
-  top: 15%;
+  top: 23%;
+  color: #fff;
   text-align:center;
+  /* */
+}
+
+.challengeWelcome-wrapper h1 {
+  margin-bottom: 2rem;
+}
+
+.challengeWelcome-wrapper a {
+  background-color: blue;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.challengeWelcome-wrapper a:hover {
+  color: #fff;
 }
 
 main {
@@ -46,4 +63,5 @@ section {
   position: absolute;
   object-fit: cover;
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+  /* */
 }
