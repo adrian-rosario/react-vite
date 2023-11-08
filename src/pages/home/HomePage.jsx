@@ -28,6 +28,7 @@ export default function HomePage() {
 
   const dogsPage = "./dogs";
   const challengesGreeting = "../challenge";
+  const alienPage = "./alien";
 
   return (
     <>
@@ -45,6 +46,17 @@ export default function HomePage() {
 
           <nav>
             <ul>
+              <li>
+                <form action={alienPage}>
+                  <motion.button
+                    whileHover={hoverAnimation}
+                    whileFocus={hoverAnimation}
+                    transition={buttonTransition}
+                  >
+                    Alien page
+                  </motion.button>
+                </form>
+              </li>
               <li>
                 <form action={challengesGreeting}>
                   <motion.button
