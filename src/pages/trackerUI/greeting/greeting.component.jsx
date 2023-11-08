@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import pageCopy from "./greeting.pageCopy"; // wip, page text isolated for i18n
+import pageCopy from "./greeting.pageCopy"; // wip, page text isolated for localization/i18n
 import hero from "../../../images/challenge/temp-hero.png";
 import landView from "../../../images/challenge/temp-city.jpg";
 import "./greeting.component.css";

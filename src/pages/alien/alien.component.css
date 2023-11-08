@@ -1,0 +1,83 @@
+#root {
+  padding: 0;
+  max-width: initial;
+}
+
+body {
+  background-color: #140f0c;
+  padding-bottom: 10rem;
+}
+
+.greeting {
+  border-radius: 0 12px 12px 0;
+  width: 32rem;
+  background-color: rgba(255, 250, 250, 0.8);
+  padding: 1rem;
+  margin-top: 5rem;
+  text-align: left;
+  z-index: 2;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.greeting h1 {
+  font-size: 1.5rem;
+}
+
+.theShip{
+  width: 30rem;
+  max-width: 40%;
+  top: 15%;
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.theClouds {
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  /* filter:blur(1px) */
+}
+
+.theAlien {
+  width: 60%;
+  /* max-width: 60%; */
+  /* bottom: -4%; */
+  top: 40%;
+  /* bottom: 25%; */
+  /* filter: blur(5px); */
+  left: -10rem;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+main {
+  /* width: 80%; */
+  /* max-width: 70rem; */
+  margin: 1rem auto;
+}
+
+h2 {
+  color: #fff;
+}
+
+.extraNote {
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid sandybrown;
+  overflow: hidden;
+  background-color: rgba(255, 250, 250, 0.8);
+}
+
+.frontXeno {
+  width:600px;
+  position:relative;
+  margin: 0 auto;
+  top: -120px;
+}
