@@ -10,6 +10,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Utilized:
 
+- `createContext` learnings from Udemy course
 - experimenting more w/ framer-motion/parallax in the `alien.component`
 - parallax scroll animation and FPO images added to the `greeting.component`
 - research from React examples for Challenge section

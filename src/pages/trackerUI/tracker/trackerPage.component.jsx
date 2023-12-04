@@ -1,14 +1,21 @@
 import ChallengeTrackerHeader from "./header/trackerHeader.component";
-import ChallengesContextProvider from "./state/tracker.context";
-import TrackerDashboard from "./dashboard/trackerDashboard.component";
+import { TodosContextProvider } from "./store/tracker.context";
+import Todo from "../tracker/todo";
+import NewTodo from "../tracker/newToDo.tsx";
+import pageCopy from "../tracker/tracker.pageCopy.js";
 
 export default function TrackerPage() {
   return (
     <>
-      <ChallengesContextProvider>
+      <TodosContextProvider>
         <ChallengeTrackerHeader />
-        <TrackerDashboard /> {/* Challenges = tracker dashboard */}
-      </ChallengesContextProvider>
+        <NewTodo />
+        <hr />
+        {pageCopy.delete}
+        <br />
+        <br />
+        <Todo />
+      </TodosContextProvider>
     </>
   );
 }

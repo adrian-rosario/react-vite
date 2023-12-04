@@ -1,9 +1,9 @@
-#root {
+body:has(.greeting) #root {
   padding: 0;
   max-width: initial;
 }
 
-body {
+body:has(.greeting) {
   background-color: #140f0c;
   padding-bottom: 10rem;
 }

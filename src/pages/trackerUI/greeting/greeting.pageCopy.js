@@ -1,6 +1,6 @@
 export default {
   h1: "Are you ready for wonderful time away?",
-  h1cta: "Let's go!",
+  h1cta: "Let's go track some goals!",
   headingOne: "There has never been a more opportune moment.",
   headingOneP:
     "Our vacations empower you to establish, monitor, and triumph over your adventures at your preferred speed. Be it for personal development, career milestones, or pure enjoyment, we are here to provide assistance.",

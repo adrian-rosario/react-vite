@@ -15,12 +15,12 @@ export default function ChallengeTrackerHeader() {
     setDisplayingDialog(false);
   }
 
-  const hoverAnimation = {
-    scale: 1.1,
-    backgroundColor: "#260339",
-    borderColor: "#fff",
-  };
-  const buttonTransition = { type: "spring", stiffness: 500, mass: 1 };
+  // const hoverAnimation = {
+  //   scale: 1.1,
+  //   backgroundColor: "#260339",
+  //   borderColor: "#fff",
+  // };
+  // const buttonTransition = { type: "spring", stiffness: 500, mass: 1 };
 
   return (
     <>
@@ -28,14 +28,14 @@ export default function ChallengeTrackerHeader() {
 
       <header id='tracker-header'>
         <h1>{pageCopy.heading}</h1>
-        <motion.button
+        {/* <motion.button
           whileHover={hoverAnimation}
           whileFocus={hoverAnimation}
           transition={buttonTransition}
           onClick={handleDisplayDialog}
         >
           {pageCopy.cta}
-        </motion.button>
+        </motion.button> */}
       </header>
     </>
   );
