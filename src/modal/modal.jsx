@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import styles from "./modal.module.css";
 import { motion } from "framer-motion";
+import { Fragment } from "react";
 
 function Backdrop(props) {
   return <div className={styles.backdrop} onClick={props.onClose}></div>;
