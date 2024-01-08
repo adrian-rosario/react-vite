@@ -2,6 +2,7 @@ import Modal from "../../modal/modal";
 import styles from "./defaultDialog.module.css";
 import images from "./intro-images";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function DefaultDialog(props) {
   const hoverAnimation = {
@@ -11,9 +12,23 @@ export default function DefaultDialog(props) {
   };
   const buttonTransition = { type: "spring", stiffness: 500, mass: 1 };
 
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        props.onClose();
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [props]);
+
   return (
     <>
-      <div role='alert' aria-live='assertive'>
+      <div role='alert' aria-live='assertive' id='dialog'>
+        <div tabIndex={0} id='trapAnchor'></div>
         <Modal onClose={props.onClose}>
           <div className={styles.introDialog}>
             <h3 className={styles.heading}>
@@ -27,7 +42,9 @@ export default function DefaultDialog(props) {
               >
                 {images.map((image) => (
                   <motion.li key={image.alt}>
-                    <img key={image.alt} {...image} />
+                    <button>
+                      <img key={image.alt} {...image} />
+                    </button>
                   </motion.li>
                 ))}
               </motion.ul>
@@ -37,6 +54,7 @@ export default function DefaultDialog(props) {
               whileFocus={hoverAnimation}
               transition={buttonTransition}
               onClick={props.onClose}
+              id='last'
             >
               Close
             </motion.button>
